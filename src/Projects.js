@@ -13,12 +13,17 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-
 import CardMedia from '@material-ui/core/CardMedia';
-
 import Paper from '@material-ui/core/Paper';
 import { colors } from "@material-ui/core";
-
+import {
+    BrowserRouter as Router,
+    Route,
+    Switch,
+    Redirect,
+    Link,
+    useRouteMatch,
+} from "react-router-dom";
 const database = firebase.firestore();
 
 const useStyles = makeStyles((theme) => ({
@@ -44,9 +49,18 @@ const Projects = () => {
     const [error, setError] = useState();
 
     useEffect(() => {
+        let mounted = true;
+        let mounted2 = true;
         database.collection('personalProjects').get()
             .then(response => {
+
+                if(mounted){
+                    
+                
                 const fetchedProjects = [];
+
+
+
                 response.docs.forEach(document => {
                     const fetchedProject = {
                         id: document.id,
@@ -60,6 +74,7 @@ const Projects = () => {
 
 
                 database.collection('workProjects').get().then(response2 => {
+                    if(mounted2){
                     const fetchedProjects2 = [];
                     response2.docs.forEach(document2 => {
 
@@ -71,13 +86,12 @@ const Projects = () => {
                         fetchedProjects2.push(fetchedProject2);
                     });
                     setProjects2(fetchedProjects2);
-                    console.log("these are projects2" + setProjects2);
+                    console.log("these are projects2" + setProjects2);}
                 })
 
-            })
-            .catch(error => {
-                setError(error);
-            });
+    }});
+            return () => {mounted = false;
+                mounted2 = false;};
     }, []);
 
     return (
@@ -107,25 +121,32 @@ const Projects = () => {
                         {projects.map(project => (<>
 
                             <Grid item >
-                                <Card id="personal-card" className={classes.root} style={cardStyles} elevation={4}  >
-                                    <CardContent>
-                                    <CardMedia
+                                <Link to={'/projects/personal/' + project.id} style={{ textDecoration: 'none' }}>
+                                    <Card id="personal-card" className={classes.root} style={cardStyles} elevation={4}
+                                    >
+                                        <CardMedia
+
                                             component="img"
                                             alt="Contemplative Reptile"
                                             height="300"
                                             image={project.img}
                                             title="Contemplative Reptile"
                                         />
-                                        <h2><strong>{project.name}</strong></h2>
-                                        {/* <h3>{project.date.startDate} - {project.date.endDate}</h3> 
+                                        <CardContent>
+
+                                            <h2 ><strong>{project.name}</strong></h2>
+
+
+                                            {/* <h3>{project.date.startDate} - {project.date.endDate}</h3> 
                                         <ul >{project.description.map(bullet => (<li>{bullet}
                                         </li>))}</ul>
                                         {/* <ul>{project.technologies.map(technology => (
                                             <p>{technology}</p>
 
                                         ))}</ul> */}
-                                    </CardContent>
-                                </Card>
+                                        </CardContent>
+                                    </Card>
+                                </Link>
                             </Grid>
 
                         </>
@@ -141,19 +162,21 @@ const Projects = () => {
                         ) : null}
                         {projects2.map(project2 => (<>
                             <Grid item >
+                                <Link to={'/projects/work/' + project2.id} style={{ textDecoration: 'none' }}>
 
-                                <Card id="work-card" className={classes.root} style={cardStyles} elevation={4}>
-                                    <CardContent>
-                                        
-                                        <h2><strong>{project2.title}</strong></h2>
-                                        {/* <h3>{project2.date.startDate} - {project2.date.endDate}</h3> 
-                                        <h3>{project2.employer}</h3>
-                                        {/* <h3>{project2.location}</h3> */}
-                                        {/* <ul >{project2.description.map(bullet => (<li>{bullet}
-                                        </li>))}</ul> */}
-                                    </CardContent>
-                                </Card>
-
+                                    <Card id="work-card" className={classes.root} style={cardStyles} elevation={4}>
+                                        <CardMedia
+                                            component="img"
+                                            alt="Project Image"
+                                            height="300"
+                                            image={project2.img}
+                                            title="Project Image"
+                                        />
+                                        <CardContent>
+                                            <h2><strong>{project2.title}</strong></h2>
+                                        </CardContent>
+                                    </Card>
+                                </Link>
                             </Grid>
                         </>
                         ))}

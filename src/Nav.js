@@ -26,15 +26,15 @@ function Nav() {
     <div className={classes.root} >
     <AppBar position="static" className={classes.root}>
       <Toolbar>
-        <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-          <MenuIcon />
-        </IconButton>
-        <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+        {/* <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+          <MenuIcon /> 
+        </IconButton>*/}
+        <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu" href="/">
           Home
         </IconButton>
-        <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+        {/* <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
           Resume
-        </IconButton>
+        </IconButton> */}
         
       </Toolbar>
     </AppBar>

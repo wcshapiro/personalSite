@@ -27,3 +27,31 @@
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
 }
+#jobImg{
+    width: 40%;
+    height: 600px;
+    object-fit: cover;
+    float: right;
+}
+#jobTitle{
+    text-align: center;
+    font-size: 3em;
+}
+#jobEmployer, #jobDate,#techHead{
+    text-align: center;
+}
+#jobDesc{
+    padding-top: 25px;
+    text-align: center;
+
+}
+#jobCard{
+    float:left;
+    margin-left: 30px;
+}
+#jobTech{
+    text-align: center;
+}
+#mainDiv{
+    width: 50%;
+}

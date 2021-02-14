@@ -9,20 +9,24 @@ import Projects from './Projects'
 import reportWebVitals from './reportWebVitals';
 import firebase from "firebase";
 import Screener from './Screener'
+import { BrowserRouter as Router } from 'react-router-dom';
+import Footer from './Footer'
 
+import { Routes } from './routes'; // where we are going to specify our routes
+// import { NavigationContainer } from '@react-navigation/native';
+// import 'react-native-gesture-handler';
 
 
 ReactDOM.render(
   <React.StrictMode>
-     {/* <Nav /> */}
-     <div className="main-container">
-    <Graph />
-    <App />
-    </div>
+    <Router>
+    <Routes />
+
+  </Router>
+  <Footer/>
+
     
-    {/* <Screener /> */}
-    <Projects />
-    {/* <Example /> */}
+    
   </React.StrictMode>,
   document.getElementById('root')
 );
