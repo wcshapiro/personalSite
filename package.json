@@ -2,7 +2,7 @@
   "name": "personal-site",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://wcshapiro.github.io/personalSite/",
+  "homepage": "https://wcshapiro.github.io/personalSite",
   "dependencies": {
     "@babel/plugin-syntax-flow": "^7.12.1",
     "@babel/preset-flow": "^7.12.1",
