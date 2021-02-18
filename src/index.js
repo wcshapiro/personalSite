@@ -9,7 +9,7 @@ import Projects from './Projects'
 import reportWebVitals from './reportWebVitals';
 import firebase from "firebase";
 import Screener from './Screener'
-import { HashRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import Footer from './Footer'
 
 import { Routes } from './routes'; // where we are going to specify our routes
@@ -19,7 +19,7 @@ import { Routes } from './routes'; // where we are going to specify our routes
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
     <Routes />
 
   </Router>
