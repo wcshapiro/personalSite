@@ -2,7 +2,7 @@
   "name": "personal-site",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://willcshapiro.com",
+  "homepage": "https://willcshapiro.com",
   "dependencies": {
     "@babel/plugin-syntax-flow": "^7.12.1",
     "@babel/preset-flow": "^7.12.1",
