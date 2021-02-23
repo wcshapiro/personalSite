@@ -50,6 +50,12 @@ code {
 
 
 }
+#myVideo {
+  top: 0;
+  width: 100%;
+  height: 1080px;
+  object-fit: cover;
+}
 .main-container{
   position: relative;
 }
