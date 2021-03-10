@@ -102,25 +102,17 @@ function Child() {
         <div id="TechDiv">
           <h3 id="techHead">Technologies Used</h3>
           <div>
-            <Grid container className={classes.root}
-              direction="row"
-              justify="space-evenly"
-              alignItems="center"
-            >
-              <div id="jobTech">{tech.map((key, value) => (
+            
+              <ul id="jobTech">{tech.map((key, value) => (
                 <>
-                  <Card id="jobCard" style={cardStyles}>
-                    <CardContent>
-                      <Typography>
-                        {key}
-                      </Typography>
-                    </CardContent>
-                  </Card>
+                  
+                        <li>{key}</li>
+                      
 
                 </>
               ))
-              }</div>
-            </Grid>
+              }</ul>
+            
           </div>
         </div>
       </div>

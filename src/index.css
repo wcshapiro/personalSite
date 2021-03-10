@@ -62,11 +62,12 @@ code {
 .ca-container{
   position:relative;
   overflow: hidden;
+  width: 100%;
 
 }
-.ca-box{
-  width: 100%;
-}
+/* .ca-box{
+  
+} */
 .cake-count{
 float: left;}
 

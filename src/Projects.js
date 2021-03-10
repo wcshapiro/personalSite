@@ -42,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
 
 const Projects = () => {
     const [spacing, setSpacing] = React.useState(2);
-    var cardStyles = { backgroundColor: "#DEE0E3", height: "400px", width: "600px" }
+    var cardStyles = { backgroundColor: "#DEE0E3", height: "400px", width: "450px" }
     const classes = useStyles();
     const [projects, setProjects] = useState([]);
     const [projects2, setProjects2] = useState([]);

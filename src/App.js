@@ -15,13 +15,13 @@ export default class Greeting extends Component {
       <>
       {/* <NavigationContainer> */}
     <div className="main-container">
-    {/* <Graph /> */}
+    <Graph />
     
-    <video autoPlay loop muted id="myVideo">
+    {/* <video autoPlay loop muted id="myVideo">
   <source src={backgroundVideo} type="video/mp4"/> 
   Your browser does not support the video tag.
 
-  </video>
+  </video> */}
   <div className="fading-container"></div>
     
     <div id="welcome-container">
