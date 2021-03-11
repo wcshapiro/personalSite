@@ -4,7 +4,6 @@ import React, { Component } from "react";
 import { init } from "ityped";
 import Graph from './Graph';
 import Projects from './Projects'
-import backgroundVideo from "./video/caSimulationCroppedShort.mp4"
 export default class Greeting extends Component {
   componentDidMount() {
     const myElement = document.querySelector("#myElement");
