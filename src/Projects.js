@@ -127,10 +127,10 @@ const Projects = () => {
                                         <CardMedia
 
                                             component="img"
-                                            alt="Contemplative Reptile"
+                                            alt="Project Image"
                                             height="300"
                                             image={project.img}
-                                            title="Contemplative Reptile"
+                                            title="Project Image"
                                         />
                                         <CardContent>
 

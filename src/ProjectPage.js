@@ -88,7 +88,7 @@ function Child() {
   return (
     <>
       <img id="jobImg" alt="" src={img} ></img>
-      <div id="mainDiv">
+      <div id="mainDiv" >
 
         <h3 id="jobTitle">{title}</h3>
         <h3 id="jobDate">{date} - {endDate}</h3>
