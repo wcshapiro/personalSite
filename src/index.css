@@ -13,13 +13,18 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.welcome-statement{
+  font-size:3.5vw;
+}
+.welcome-bio{
+  font-size: 2vw;
+}
 #welcome-container{
-  font-size: 2rem;
-  border-radius: 0px 25px 25px 0px;
+  border-radius: 0vh 5vh 5vh 0vh;
   position: absolute;
   top: 20%;
-  height: 400px;
-  width: 550px;
+  height: 40vh;
+  width: 35vw;
   color: black;
   background-color: #ffffff;
   opacity: .9;

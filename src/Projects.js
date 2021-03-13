@@ -42,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
 
 const Projects = () => {
     const [spacing, setSpacing] = React.useState(2);
-    var cardStyles = { backgroundColor: "#DEE0E3", height: "400px", width: "450px" }
+    var cardStyles = { backgroundColor: "#DEE0E3", height: "600x", minWidth: "40vw", maxWidth:"450px" }
     const classes = useStyles();
     const [projects, setProjects] = useState([]);
     const [projects2, setProjects2] = useState([]);
@@ -132,7 +132,8 @@ const Projects = () => {
                                             image={project.img}
                                             title="Project Image"
                                         />
-                                        <CardContent>
+                                        <CardContent
+                                        height = "200px">
 
                                             <h2 ><strong>{project.name}</strong></h2>
 

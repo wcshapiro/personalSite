@@ -246,8 +246,8 @@ export default (props) => {
         <div className="ca-container">
         
             <Sketch className="ca-box" setup={setup} draw={draw} />
-            <div className="fading-container">
-            </div>
+            {/* <div className="fading-container">
+            </div> */}
             
         </div>
         {/* <ScatterChart
